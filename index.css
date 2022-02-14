@@ -179,7 +179,7 @@ main {
 footer p {
   height: 8vh;
   padding: 16px;
-  border: 2px solid #000000;
+  border: 2px solid #000;
   margin: 0 14px 16px;
   display: flex;
   align-items: center;

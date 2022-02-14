@@ -1,7 +1,7 @@
 import { displayBooks } from '../render-books/index.js';
-import { navToSection } from './nav-to-section.js';
+import navToSection from './nav-to-section.js';
 
-export const setListeners = (gBookShelf) => {
+export default function setListeners(gBookShelf) {
   document.addEventListener('click', (e) => {
     if (e.target.matches('.remove-book')) {
       gBookShelf.removeBook(e.target.dataset.id);
@@ -18,10 +18,12 @@ export const setListeners = (gBookShelf) => {
         author.reportValidity();
         return;
       }
-      gBookShelf.addBook(title.value, author.value, gBookShelf.bookList);
+      gBookShelf.addBook(title.value, author.value);
       title.value = '';
       author.value = '';
       displayBooks(gBookShelf);
+      const listNavLink = document.querySelector('.show-list');
+      navToSection(listNavLink, '#book-list');
     }
     if (e.target.matches('.navlinks li a')) {
       const { href } = e.target;

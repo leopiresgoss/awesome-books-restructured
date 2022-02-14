@@ -1,5 +1,5 @@
-import { setDate } from './set-date.js';
+import setDate from './set-date.js';
 
-export const updateDate = () => {
+export default function updateDate() {
   window.setInterval(setDate, 1000);
 }

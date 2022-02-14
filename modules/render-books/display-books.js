@@ -1,4 +1,4 @@
-export const displayBooks = (gBookShelf) => {
+export default function displayBooks(gBookShelf) {
   const { bookList } = gBookShelf;
   gBookShelf.saveData(bookList);
   const booksContainer = document.querySelector('.books-container');

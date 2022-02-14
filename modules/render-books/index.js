@@ -1,2 +1,2 @@
-export { BookShelf } from './book-shelf.js';
-export { displayBooks } from './display-books.js';
+export { default as BookShelf } from './book-shelf.js';
+export { default as displayBooks } from './display-books.js';

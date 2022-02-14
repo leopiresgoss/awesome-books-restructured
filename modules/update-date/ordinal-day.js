@@ -1,4 +1,4 @@
-export const ordinalDay = (day) => {
+export default function ordinalDay(day) {
   if (day > 3 && day < 21) return `${day}th`;
   switch (day % 10) {
     case 1: return `${day}st`;

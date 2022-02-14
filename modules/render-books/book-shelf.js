@@ -1,4 +1,4 @@
-export class BookShelf {
+export default class BookShelf {
   constructor() {
     this.#loadDataFromStorage();
   }

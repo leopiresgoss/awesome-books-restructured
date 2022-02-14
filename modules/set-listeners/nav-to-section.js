@@ -1,4 +1,4 @@
-export default function navToSection(element, sectionName) {
+const navToSection = (element, sectionName) => {
   const navLinks = document.querySelectorAll('.navlinks li a');
   navLinks.forEach((link) => {
     link.classList.remove('selected');
@@ -10,4 +10,6 @@ export default function navToSection(element, sectionName) {
     section.classList.remove('active');
   });
   section.classList.add('active');
-}
+};
+
+export default navToSection;

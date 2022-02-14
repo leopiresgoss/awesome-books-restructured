@@ -1,4 +1,4 @@
-export default function displayBooks(gBookShelf) {
+const displayBooks = (gBookShelf) => {
   const { bookList } = gBookShelf;
   gBookShelf.saveData(bookList);
   const booksContainer = document.querySelector('.books-container');
@@ -11,4 +11,6 @@ export default function displayBooks(gBookShelf) {
     bookCard.querySelector('.remove-book').setAttribute('data-id', book.id);
     booksContainer.appendChild(bookCard);
   });
-}
+};
+
+export default displayBooks;

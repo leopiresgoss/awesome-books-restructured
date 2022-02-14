@@ -1,6 +1,6 @@
 import ordinalDay from './ordinal-day.js';
 
-export default function setDate() {
+const setDate = () => {
   const date = window.luxon.DateTime.now();
   const {
     day,
@@ -18,4 +18,6 @@ export default function setDate() {
 
   const fullDate = `${month} ${updatedDay} ${year}, ${time}`;
   document.querySelector('.datetime p').textContent = fullDate;
-}
+};
+
+export default setDate;

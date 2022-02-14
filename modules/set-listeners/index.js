@@ -1,7 +1,7 @@
 import { displayBooks } from '../render-books/index.js';
 import navToSection from './nav-to-section.js';
 
-export default function setListeners(gBookShelf) {
+const setListeners = (gBookShelf) => {
   document.addEventListener('click', (e) => {
     if (e.target.matches('.remove-book')) {
       gBookShelf.removeBook(e.target.dataset.id);
@@ -32,4 +32,6 @@ export default function setListeners(gBookShelf) {
       navToSection(e.target, section);
     }
   });
-}
+};
+
+export default setListeners;

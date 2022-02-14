@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Awesome Books</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h3>Awesome Books</h3>
+      <ul class="navlinks">
+        <li>
+          <a href="#book-list" class="show-list selected">List</a>
+        </li>
+        <li>
+          <a href="#add" class="show-add">Add new</a>
+        </li>
+        <li>
+          <a href="#contact" class="show-contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="datetime">
+      <p></p>
+    </div>
+  </header>
+  <main>
+    <section id="book-list" class="active">
+      <h1>All awesome Books</h1>
+      <template id="books-template">
+        <ul class="book-card">
+          <li class="title">Book 1</li>
+          <li class="author">Test test</li>
+          <li>
+            <button type="button" class="remove-book" data-id="">Remove</button>
+          </li>
+        </ul>
+      </template>
+      <div class="books-container">
+      </div>
+    </section>
+    <section id="add">
+      <h2>Add a new book</h2>
+      <ul class="add-book">
+        <li>
+          <input type="text" name="title" id="title" placeholder="Title" required>
+        </li>
+        <li>
+          <input type="text" name="author" id="author" placeholder="Author" required>
+        </li>
+        <li>
+          <button type="button" class="add-btn">Add</button>
+        </li>
+      </ul>
+    </section>
+    <section id="contact" class="">
+      <h2>Contact information</h2>
+      <p>Do you have any questions or just want to say "Hello"? <br>You can reach out to us!</p>
+      <ul>
+        <li>Our email: contact@awesomebooks.com </li>
+        <li>Our phone number: 00 435 865 344 22</li>
+        <li>Our address: Streetname 22. 84503, City, Country</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright 2022 &#169; Awesome Books</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
